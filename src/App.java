@@ -7,7 +7,7 @@ public class App {
         int suma = rec.sumaConsecutivo(5);
         System.out.println(suma);
 
-        int potencia = rec.potencia(3, 3);
+        int potencia = rec.potencia(4, 3);
         System.out.println(potencia);
 
         int sumaD= rec.sumarDigitos(456);
