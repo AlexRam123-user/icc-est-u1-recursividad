@@ -30,14 +30,26 @@ public class Recursividad {
         return base * potencia(base, exponente - 1);
     }
 
-    //crear un metodo que sume los digitos de un numero
+    // crear un metodo que sume los digitos de un numero
     // si mando 456 sea igual a 15
-    //4+5+6 = 15
+    // 4+5+6 = 15
     // pista se usa % MOD
-    public int sumarDigitos(int n){
+    public int sumarDigitos(int n) {
         if (n < 10) {
             return n;
         }
-        return (n % 10) + sumarDigitos(n / 10);
+        int respuesta = (n % 10) + sumarDigitos(n / 10);
+        return respuesta;
     }
+
+    public int fibonacci(int n) {
+        if (n == 0) {
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        }
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
+    
 }
