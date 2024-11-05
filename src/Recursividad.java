@@ -51,5 +51,27 @@ public class Recursividad {
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
-    
+    public int busquedaLineal(int[] array, int valor, int indice) {
+        if (indice >= array.length) {
+            return -1; 
+        }
+        if (array[indice] == valor) {
+            return indice;
+        }
+        return busquedaLineal(array, valor, indice + 1);
+    }
+
+    public int busquedaBinaria(int[] array, int valor, int inicio, int fin) {
+        if (inicio > fin) {
+            return -1;
+        }
+        int medio = (inicio + fin) / 2;
+        if (array[medio] == valor) {
+            return medio;
+        }
+        if (valor < array[medio]) {
+            return busquedaBinaria(array, valor, inicio, medio - 1);
+        }
+        return busquedaBinaria(array, valor, medio + 1, fin);
+    }
 }
